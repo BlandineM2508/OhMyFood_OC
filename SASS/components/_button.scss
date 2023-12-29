@@ -1,0 +1,14 @@
+
+/*Boutons du site*/
+
+.btn {
+    text-align: center;
+    border: none;
+    border-radius: 1.5rem;
+    background: linear-gradient(0deg, $purple -11.44%, $pink 124%);
+    @include font-btn (white);
+    padding: 0.81rem 1.17rem 0.81rem 1.17rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+}

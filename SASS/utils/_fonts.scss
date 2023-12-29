@@ -1,0 +1,44 @@
+/*Fonts*/
+
+@mixin font-h1 ($color) {
+    font-family: 'Shrikhand', serif;
+    color: $color;
+}
+
+@mixin font-subtitle ($color) {
+     font-family: 'Roboto', sans-serif;
+     font-weight: 500;
+     color: $color;
+}
+
+@mixin font-h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+@mixin font-subtitle-2 ($color) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: $color;
+}
+
+@mixin font-btn ($color) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: $color;
+    font-size: 1rem;
+}
+
+@mixin font-title-cards ($color) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: $color;
+}
+
+@mixin font-subtitle-3 ($color) {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: $color;
+}

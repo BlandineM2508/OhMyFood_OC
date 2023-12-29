@@ -1,0 +1,8 @@
+
+/*Mixin pour la bordure ombre dans l'header*/
+
+
+@mixin border-shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+   
+}
