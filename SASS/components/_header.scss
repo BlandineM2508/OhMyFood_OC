@@ -1,0 +1,65 @@
+/*Header*/
+
+
+@mixin header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    &__title {
+        @include font-h1 ($black);
+        @include border-shadow;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 0.88rem 0rem 0.81rem 0rem;
+        font-size: 1.875rem;
+        z-index: 2;
+    }
+
+    .header__location {
+        height: 3rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: $grey;
+        z-index: 1;
+
+        &__form {
+            display: flex;
+            flex-direction: row;
+            background-color: $grey;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+
+
+            &__img {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 0.7rem;
+                height: 1rem;
+            }
+
+            &__input {
+
+                @include font-subtitle ($dark-grey);
+                background-color: $grey;
+                border: 0;
+                outline: none;
+            }
+
+            &__input::placeholder {
+                @include font-subtitle ($dark-grey);
+                opacity: 1;
+            }
+        }
+
+    }
+
+}

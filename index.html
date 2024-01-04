@@ -2,138 +2,240 @@
 <html lang="fr">
 
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh My Food</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="./SASS/index.css">
-    
+
 </head>
 
 <body>
 
 
-<header>
-    <div class="header">
-        <h1 class="header__title">ohmyfood</h1>
-        <div class="header__location">
-            <img class="header__location__img" src="./Assets/images/icones/Pin.svg" alt="icone localisation">
-            <p class="header__location__p">Paris, Belleville</p>
+    <header>
+        <div class="header">
+            <h1 class="header__title">ohmyfood</h1>
+
+            <div class="header__location">
+                <form class="header__location__form" method="get" action="#">
+                    <label><img class="header__location__form__img" src="./Assets/images/icones/Pin.svg"
+                            alt="icone de localisation"></label>
+                    <input class="header__location__form__input" type="text" name="ville" id="ville"
+                        placeholder="Paris, Belleville" size="12" maxlength="30">
+                </form>
+            </div>
+
         </div>
-    </div>
 
-</header>
+    </header>
 
-<main>
-    <section class="section__cto">
-        <h2 class="section__cto__title">Réservez le menu qui vous convient</h2>
-        <p class="section__cto__p">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <input class="btn" type="button" value="Explorer nos restaurants">
-    </section>
+    <main>
+        <section class="section__cto">
+            <h2 class="section__cto__title">Réservez le menu qui vous convient</h2>
+            <p class="section__cto__p">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            <input class="btn" type="button" value="Explorer nos restaurants">
+        </section>
 
-    <section class="section__fonctionnement">
-        <h2 class="section__fonctionnement__title">Fonctionnement</h2>
-        <ul>
-           <li class="section__fonctionnement__li">
-                <p class="section__fonctionnement__li__p">1</p>
-                <img src="./Assets/images/icones/mobile-screen-button.svg" alt="icone d'un 
+        <section class="section__fonctionnement">
+            <h2 class="section__fonctionnement__title">Fonctionnement</h2>
+            <ul>
+                <li class="section__fonctionnement__li">
+                    <p class="section__fonctionnement__li__p">1</p>
+                    <img src="./Assets/images/icones/mobile-screen-button.svg" alt="icone d'un 
                 mobile">
-                <p>Choisissez un restaurant</p>
+                    <p class="section__fonctionnement__li__p2">Choisissez un restaurant</p>
+                </li>
+
+                <li class="section__fonctionnement__li">
+                    <p class="section__fonctionnement__li__p">2</p>
+                    <img src="./Assets/images/icones/list-ul.svg" alt="icone d'une liste">
+                    <p class="section__fonctionnement__li__p2">Composez votre menu</p>
+                </li>
+
+                <li class="section__fonctionnement__li">
+                    <p class="section__fonctionnement__li__p">3</p>
+                    <img src="./Assets/images/icones/store.svg" alt="icone d'un magasin">
+                    <p class="section__fonctionnement__li__p2">Dégustez au restaurant</p>
+                </li>
+
+            </ul>
+        </section>
+
+        <section class="section__restaurants">
+
+
+            <h2 class="section__restaurants__title">Restaurants</h2>
+
+            <div class="restaurants">
+                <article class="restaurants__cards">
+                    <a class="restaurants__cards__link" href="#">
+                        <img class="restaurants__cards__link__img"
+                            src="./Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                            alt="photo d'un plat de restaurant">
+                        <p class="restaurants__cards__link__new">Nouveau</p>
+
+                        <div class="restaurants__cards__link__card-content">
+                            <h3 class="restaurants__cards__link__card-content__title">La palette du goût</h3>
+                            <p class="restaurants__cards__link__card-content__subtitle">Ménilmontant</p>
+                        </div>
+                    </a>
+                    <svg class="restaurants__cards__like" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                    </svg>
+
+
+                    <svg class="restaurants__cards__like--display" xmlns="http://www.w3.org/2000/svg" height="16"
+                        width="16" viewBox="0 0 512 512"
+                        fill="url(#paint0_linear_164175_527)"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                        <defs>
+                            <linearGradient id="paint0_linear_164175_527" x1="50%" y1="0" x2="50%" y2="70%"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#9356DC" />
+                                <stop offset="1" stop-color="#FF79DA" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </article>
+
+
+
+                <article class="restaurants__cards">
+                    <a class="restaurants__cards__link" href="#">
+                        <img class="restaurants__cards__link__img restaurants__cards__link__img--center"
+                            src="./Assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                            alt="photo d'un plat de restaurant">
+                        <p class="restaurants__cards__link__new">Nouveau</p>
+                        <div class="restaurants__cards__link__card-content">
+                            <h3 class="restaurants__cards__link__card-content__title">La note enchantée</h3>
+                            <p class="restaurants__cards__link__card-content__subtitle">Charonne</p>
+                        </div>
+                    </a>
+                    <svg class="restaurants__cards__like" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                    </svg>
+
+
+                    <svg class="restaurants__cards__like--display" xmlns="http://www.w3.org/2000/svg" height="16"
+                        width="16" viewBox="0 0 512 512"
+                        fill="url(#paint0_linear_164175_527)"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                        <defs>
+                            <linearGradient id="paint0_linear_164175_527" x1="50%" y1="0" x2="50%" y2="70%"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#9356DC" />
+                                <stop offset="1" stop-color="#FF79DA" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </article>
+
+
+
+                <article class="restaurants__cards">
+                    <a class="restaurants__cards__link" href="#">
+                        <img class="restaurants__cards__link__img"
+                            src="./Assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                            alt="photo d'un plat de restaurant">
+                        <div class="restaurants__cards__link__card-content">
+                            <h3 class="restaurants__cards__link__card-content__title">À la française</h3>
+                            <p class="restaurants__cards__link__card-content__subtitle">Cité Rouge</p>
+                        </div>
+                    </a>
+                    <svg class="restaurants__cards__like" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                    </svg>
+
+
+                    <svg class="restaurants__cards__like--display" xmlns="http://www.w3.org/2000/svg" height="16"
+                        width="16" viewBox="0 0 512 512"
+                        fill="url(#paint0_linear_164175_527)"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                        <defs>
+                            <linearGradient id="paint0_linear_164175_527" x1="50%" y1="0" x2="50%" y2="70%"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#9356DC" />
+                                <stop offset="1" stop-color="#FF79DA" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </article>
+
+
+
+                <article class="restaurants__cards">
+                    <a class="restaurants__cards__link" href="#">
+                        <img class="restaurants__cards__link__img"
+                            src="./Assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                            alt="photo d'un plat de restaurant">
+                        <div class="restaurants__cards__link__card-content">
+                            <h3 class="restaurants__cards__link__card-content__title">Le délice des sens</h3>
+                            <p class="restaurants__cards__link__card-content__subtitle">Folie-Méricourt</p>
+                        </div>
+                    </a>
+                    <svg class="restaurants__cards__like" xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                        viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M225.8 468.2l-2.5-2.3L48.1 303.2C17.4 274.7 0 234.7 0 192.8v-3.3c0-70.4 50-130.8 119.2-144C158.6 37.9 198.9 47 231 69.6c9 6.4 17.4 13.8 25 22.3c4.2-4.8 8.7-9.2 13.5-13.3c3.7-3.2 7.5-6.2 11.5-9c0 0 0 0 0 0C313.1 47 353.4 37.9 392.8 45.4C462 58.6 512 119.1 512 189.5v3.3c0 41.9-17.4 81.9-48.1 110.4L288.7 465.9l-2.5 2.3c-8.2 7.6-19 11.9-30.2 11.9s-22-4.2-30.2-11.9zM239.1 145c-.4-.3-.7-.7-1-1.1l-17.8-20c0 0-.1-.1-.1-.1c0 0 0 0 0 0c-23.1-25.9-58-37.7-92-31.2C81.6 101.5 48 142.1 48 189.5v3.3c0 28.5 11.9 55.8 32.8 75.2L256 430.7 431.2 268c20.9-19.4 32.8-46.7 32.8-75.2v-3.3c0-47.3-33.6-88-80.1-96.9c-34-6.5-69 5.4-92 31.2c0 0 0 0-.1 .1s0 0-.1 .1l-17.8 20c-.3 .4-.7 .7-1 1.1c-4.5 4.5-10.6 7-16.9 7s-12.4-2.5-16.9-7z" />
+                    </svg>
+
+
+                    <svg class="restaurants__cards__like--display" xmlns="http://www.w3.org/2000/svg" height="16"
+                        width="16" viewBox="0 0 512 512"
+                        fill="url(#paint0_linear_164175_527)"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path
+                            d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" />
+                        <defs>
+                            <linearGradient id="paint0_linear_164175_527" x1="50%" y1="0" x2="50%" y2="70%"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#9356DC" />
+                                <stop offset="1" stop-color="#FF79DA" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+
+
+
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <ul class="footer__ul">
+            <h2>ohmyfood</h2>
+            <li class="footer__ul__subtitle"><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
             </li>
-
-           <li class="section__fonctionnement__li">
-                <p class="section__fonctionnement__li__p">2</p>
-                <img src="./Assets/images/icones/list-ul.svg" alt="icone d'une liste">
-                <p>Composez votre  menu</p>
-            </li> 
-
-            <li class="section__fonctionnement__li">
-                <p class="section__fonctionnement__li__p">3</p>
-                <img src="./Assets/images/icones/store.svg" alt="icone d'un magasin">
-                <p>Dégustez au restaurant</p>
-            </li>
-
+            <li class="footer__ul__subtitle"><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir
+                    partenaire</a></li>
+            <li class="footer__ul__mentions"><a href="#">Mentions légales</a></li>
+            <li class="footer__ul__contact"><a href="mailto:blandinemaurice2508@gmail.com">
+                    Contact</a></li>
         </ul>
-    </section>
-
-    <section class="section__restaurants">
-
-          
-        <h2 class="section__restaurants__title">Restaurants</h2>
-        
-        <div class="restaurants">
-            <a href="#">
-                <article class="restaurants__cards">
-                    <img class="restaurants__cards__img" src="./Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" 
-                    alt="photo d'un plat de restaurant">
-                    <p class="restaurants__cards__new">Nouveau</p>
-             
-                    <h3 class="restaurants__cards__title">La palette du goût</h3>
-                    <p class="restaurants__cards__subtitle">Ménilmontant</p>
-                    <i class="fa-regular fa-heart"></i>
-             
-                </article>
-            </a>
-            
-            <a href="#">
-                <article class="restaurants__cards">
-                    <img class="restaurants__cards__img--2" src="./Assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" 
-                    alt="photo d'un plat de restaurant">
-                    <p class="restaurants__cards__new">Nouveau</p>
-             
-                    <h3 class="restaurants__cards__title">La note enchantée</h3>
-                    <p class="restaurants__cards__subtitle">Charonne</p>
-                    <i class="fa-regular fa-heart"></i>
-             
-                </article>
-            </a>  
-            
-            <a href="#">
-                <article class="restaurants__cards">
-                    <img class="restaurants__cards__img" src="./Assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" 
-                    alt="photo d'un plat de restaurant">
-                 
-             
-                    <h3 class="restaurants__cards__title">À la française</h3>
-                    <p class="restaurants__cards__subtitle">Cité Rouge</p>
-                    <i class="fa-regular fa-heart"></i>
-             
-                </article>
-            </a>  
-            
-            <a href="#">
-                <article class="restaurants__cards">
-                    <img class="restaurants__cards__img" src="./Assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" 
-                    alt="photo d'un plat de restaurant">
-                    
-             
-                    <h3 class="restaurants__cards__title">Le délice des sens</h3>
-                    <p class="restaurants__cards__subtitle">Folie-Méricourt</p>
-                    <i class="fa-regular fa-heart"></i>
-             
-                </article>
-            </a>
-
-        </div>
-
-    </section>
-
-
-</main>
-
-<footer class="footer">
-    <ul class="footer__ul">
-        <h2>ohmyfood</h2>
-        <li class="footer__ul--subtitle"><a><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-        <li class="footer__ul--subtitle"><a><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
-        <li class="footer__ul--mentions"><a>Mentions légales</a></li>
-        <li class="footer__ul--contact"><a>Contact</a></li>
-    </ul>
-</footer>
+    </footer>
 
 
 </body>
+
 </html>

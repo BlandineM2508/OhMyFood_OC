@@ -1,0 +1,55 @@
+@import "./utils/global";
+@import "./utils/colors";
+@import "./utils/fonts";
+@import "./utils/shadows";
+@import "./components/button";
+@import "./components/header";
+@import "./components/footer";
+
+
+
+
+//HEADER//
+
+.header {
+    @include header;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    @include footer;
+
+}

@@ -1,1 +1,171 @@
-/*# sourceMappingURL=restaurants.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+font {
+  font-family: "Roboto", sans-serif;
+  font-family: "Shrikhand", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Variables Couleurs*/
+/*Fonts*/
+/*Mixin pour la bordure ombre dans l'header*/
+/*Boutons du site*/
+/*Header*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header__title {
+  font-family: "Shrikhand", serif;
+  color: black;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0.88rem 0rem 0.81rem 0rem;
+  font-size: 1.875rem;
+  z-index: 2;
+}
+.header .header__location {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #EAEAEA;
+  z-index: 1;
+}
+.header .header__location__form {
+  display: flex;
+  flex-direction: row;
+  background-color: #EAEAEA;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.header .header__location__form__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.7rem;
+  height: 1rem;
+}
+.header .header__location__form__input {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #353535;
+  background-color: #EAEAEA;
+  border: 0;
+  outline: none;
+}
+.header .header__location__form__input::-moz-placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #353535;
+  opacity: 1;
+}
+.header .header__location__form__input::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #353535;
+  opacity: 1;
+}
+
+.footer {
+  display: flex;
+  padding: 1.38rem 1.56rem;
+  background-color: #353535;
+}
+.footer__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.footer__ul a {
+  text-decoration: none;
+  color: white;
+}
+.footer__ul h2 {
+  font-family: "Shrikhand", serif;
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.footer__ul i {
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+.footer__ul__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.footer__ul__contact {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: white;
+}
+.footer__ul__mentions {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: white;
+}/*# sourceMappingURL=restaurants.css.map */
