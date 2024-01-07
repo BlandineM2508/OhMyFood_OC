@@ -1,0 +1,32 @@
+@mixin header-restaurants 
+
+{
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+
+
+    &__title {
+        @include font-h1 ($black);
+        @include border-shadow;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding: 0.88rem 0rem 0.81rem 0rem;
+        font-size: 1.875rem;
+        z-index: 2;
+    }
+   
+    &__back {
+        position: absolute;
+        z-index: 3;
+        left: 1rem;
+        top: 0.9rem;
+       
+       }
+
+  
+    
+}

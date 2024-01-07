@@ -3,8 +3,11 @@
 @import "./utils/fonts";
 @import "./utils/shadows";
 @import "./components/button";
-@import "./components/header";
+@import "./components/header-restaurants";
 @import "./components/footer";
+@import "./components/menu-presentation";
+
+
 
 
 
@@ -12,44 +15,37 @@
 //HEADER//
 
 .header {
-    @include header;
-} 
+    @include header-restaurants;
+}
 
 
+//MAIN//
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 17rem;
+        position: absolute;
+        z-index: 1;
+    }
 
 
+    &__presentation {
+        @include menu-presentation;
+    }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//FOOTER//
 
 .footer {
     @include footer;
-
+    margin-top: 13.5rem;
 }
+

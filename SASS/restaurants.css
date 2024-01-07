@@ -60,77 +60,514 @@ font {
 
 /*Variables Couleurs*/
 /*Fonts*/
-/*Mixin pour la bordure ombre dans l'header*/
 /*Boutons du site*/
-/*Header*/
 .header {
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 .header__title {
   font-family: "Shrikhand", serif;
   color: black;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  width: 100%;
+  position: relative;
   padding: 0.88rem 0rem 0.81rem 0rem;
   font-size: 1.875rem;
   z-index: 2;
 }
-.header .header__location {
-  height: 3rem;
-  width: 100%;
+.header__back {
+  position: absolute;
+  z-index: 3;
+  left: 1rem;
+  top: 0.9rem;
+}
+
+.menu {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  background-color: #EAEAEA;
+  flex-direction: column;
+  position: relative;
+}
+.menu img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 17rem;
+  position: absolute;
   z-index: 1;
 }
-.header .header__location__form {
+.menu__presentation {
+  background-color: #F6F6F6;
   display: flex;
-  flex-direction: row;
-  background-color: #EAEAEA;
+  flex-direction: column;
+  z-index: 2;
+  position: relative;
+  gap: 2.5rem;
+  border-radius: 2.5rem 2.5rem 0rem 0rem;
+  padding: 2rem 1rem 0rem 1rem;
+  top: 13.5rem;
+}
+.menu__presentation__like {
+  position: absolute;
+  bottom: 1.5rem;
+  top: 2.2rem;
+  right: 10%;
+  width: 1.375rem;
+  height: 1.3125rem;
+}
+.menu__presentation__like--display {
+  position: absolute;
+  bottom: 1.5rem;
+  top: 2.2rem;
+  right: 10%;
+  width: 1.375rem;
+  height: 1.3125rem;
+  opacity: 0;
+  cursor: pointer;
+  transition: 300ms;
+}
+.menu__presentation__like--display:hover {
+  opacity: 1;
+  transform: scale(110%);
+}
+.menu__presentation__like--display:active {
+  opacity: 1;
+  transform: scale(110%);
+}
+.menu__presentation h1 {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: "Shrikhand", serif;
+  color: black;
+  font-size: 1.75rem;
+}
+.menu__presentation__entrees {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
-.header .header__location__form__img {
+.menu__presentation__entrees h2 {
+  display: flex;
+  align-self: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+  border-bottom: 2px solid #99E2D0;
+  padding-bottom: 0.2rem;
+  width: 2.5rem;
+}
+.menu__presentation__entrees__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.9rem;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 4.5rem;
+  padding: 1rem;
+  gap: 0.3rem;
+  overflow: hidden;
+}
+.menu__presentation__entrees__cards__card-content {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.menu__presentation__entrees__cards__card-content h3 {
+  display: flex;
   align-items: center;
-  width: 0.7rem;
-  height: 1rem;
-}
-.header .header__location__form__input {
+  justify-content: flex-start;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: #353535;
-  background-color: #EAEAEA;
-  border: 0;
-  outline: none;
+  color: black;
+  font-size: 1rem;
+  font-size: 1rem;
 }
-.header .header__location__form__input::-moz-placeholder {
+.menu__presentation__entrees__cards__card-content p {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+.menu__presentation__entrees__cards__card-content p span {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: #353535;
+  font-weight: 700;
+}
+.menu__presentation__entrees__cards:hover h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  color: #353535;
-  opacity: 1;
+  color: black;
+  font-size: 1rem;
+  font-size: 1rem;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
-.header .header__location__form__input::placeholder {
+.menu__presentation__entrees__cards:hover p {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+.menu__presentation__entrees__cards:hover p span {
+  position: absolute;
+  right: 6rem;
+  animation-duration: 500ms;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-right: -4rem;
+  }
+  to {
+    margin-right: 0rem;
+  }
+}
+.menu__presentation__entrees__cards:hover img {
+  display: flex;
+  position: relative;
+  width: 4.5rem;
+  animation-duration: 500ms;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-right: -4rem;
+  }
+  to {
+    margin-right: 0rem;
+  }
+}
+.menu__presentation__entrees__cards img {
+  display: none;
+  height: 4.5rem;
+  position: relative;
+  right: -1.1rem;
+  bottom: 3.6rem;
+  align-self: flex-end;
+}
+.menu__presentation__plats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.menu__presentation__plats h2 {
+  display: flex;
+  align-self: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+  border-bottom: 2px solid #99E2D0;
+  padding-bottom: 0.2rem;
+  width: 2.5rem;
+}
+.menu__presentation__plats__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.9rem;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 4.5rem;
+  padding: 1rem;
+  gap: 0.3rem;
+  overflow: hidden;
+}
+.menu__presentation__plats__cards__card-content {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.menu__presentation__plats__cards__card-content h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  color: black;
+  font-size: 1rem;
+  font-size: 1rem;
+}
+.menu__presentation__plats__cards__card-content p {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+.menu__presentation__plats__cards__card-content p span {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   color: #353535;
-  opacity: 1;
+  font-weight: 700;
+}
+.menu__presentation__plats__cards:hover h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: black;
+  font-size: 1rem;
+  font-size: 1rem;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__presentation__plats__cards:hover p {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+.menu__presentation__plats__cards:hover p span {
+  position: absolute;
+  right: 6rem;
+  animation-duration: 500ms;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-right: -4rem;
+  }
+  to {
+    margin-right: 0rem;
+  }
+}
+.menu__presentation__plats__cards:hover img {
+  display: flex;
+  position: relative;
+  width: 4.5rem;
+  animation-duration: 500ms;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-right: -4rem;
+  }
+  to {
+    margin-right: 0rem;
+  }
+}
+.menu__presentation__plats__cards img {
+  display: none;
+  height: 4.5rem;
+  position: relative;
+  right: -1.1rem;
+  bottom: 3.6rem;
+  align-self: flex-end;
+}
+.menu__presentation__desserts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.menu__presentation__desserts h2 {
+  display: flex;
+  align-self: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+  border-bottom: 2px solid #99E2D0;
+  padding-bottom: 0.2rem;
+  width: 2.5rem;
+}
+.menu__presentation__desserts__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  border-radius: 0.9rem;
+  box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 4.5rem;
+  padding: 1rem;
+  gap: 0.3rem;
+  overflow: hidden;
+}
+.menu__presentation__desserts__cards__card-content {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.menu__presentation__desserts__cards__card-content h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: black;
+  font-size: 1rem;
+  font-size: 1rem;
+}
+.menu__presentation__desserts__cards__card-content p {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+.menu__presentation__desserts__cards__card-content p span {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  color: #353535;
+  font-weight: 700;
+}
+.menu__presentation__desserts__cards:hover h3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: black;
+  font-size: 1rem;
+  font-size: 1rem;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.menu__presentation__desserts__cards:hover p {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: black;
+}
+.menu__presentation__desserts__cards:hover p span {
+  position: absolute;
+  right: 6rem;
+  animation-duration: 500ms;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-right: -4rem;
+  }
+  to {
+    margin-right: 0rem;
+  }
+}
+.menu__presentation__desserts__cards:hover img {
+  display: flex;
+  position: relative;
+  width: 4.5rem;
+  animation-duration: 500ms;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-right: -4rem;
+  }
+  to {
+    margin-right: 0rem;
+  }
+}
+.menu__presentation__desserts__cards img {
+  display: none;
+  height: 4.5rem;
+  position: relative;
+  right: -1.1rem;
+  bottom: 3.6rem;
+  align-self: flex-end;
+}
+.menu__presentation__btn {
+  text-align: center;
+  border: none;
+  border-radius: 1.5rem;
+  background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 124%);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: white;
+  font-size: 1rem;
+  padding: 0.81rem 1.17rem 0.81rem 1.17rem;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 11rem;
+  height: auto;
+  margin-bottom: 2.5rem;
+}
+.menu__presentation__btn:hover {
+  background: linear-gradient(rgba(255, 121, 217, 0.8980392157), rgba(146, 86, 220, 0.8980392157));
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
 .footer {
   display: flex;
+  flex-direction: column;
   padding: 1.38rem 1.56rem;
   background-color: #353535;
+  width: 100%;
+  margin-top: 13.5rem;
+}
+.footer h2 {
+  font-family: "Shrikhand", serif;
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 .footer__ul {
   display: flex;
@@ -140,12 +577,6 @@ font {
 .footer__ul a {
   text-decoration: none;
   color: white;
-}
-.footer__ul h2 {
-  font-family: "Shrikhand", serif;
-  color: white;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
 }
 .footer__ul i {
   width: 1.5rem;

@@ -60,9 +60,7 @@ font {
 
 /*Variables Couleurs*/
 /*Fonts*/
-/*Mixin pour la bordure ombre dans l'header*/
 /*Boutons du site*/
-/*Header*/
 .header {
   display: flex;
   justify-content: center;
@@ -72,7 +70,7 @@ font {
 .header__title {
   font-family: "Shrikhand", serif;
   color: black;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -346,8 +344,16 @@ font {
 
 .footer {
   display: flex;
+  flex-direction: column;
   padding: 1.38rem 1.56rem;
   background-color: #353535;
+  width: 100%;
+}
+.footer h2 {
+  font-family: "Shrikhand", serif;
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 .footer__ul {
   display: flex;
@@ -357,12 +363,6 @@ font {
 .footer__ul a {
   text-decoration: none;
   color: white;
-}
-.footer__ul h2 {
-  font-family: "Shrikhand", serif;
-  color: white;
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
 }
 .footer__ul i {
   width: 1.5rem;
