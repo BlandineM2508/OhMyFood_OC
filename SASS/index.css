@@ -236,7 +236,7 @@ font {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4.5rem 1rem 4rem 1rem;
+  padding: 3.37rem 1rem 4.12rem 1rem;
   gap: 1.5rem;
 }
 .section__restaurants__title {
@@ -385,4 +385,102 @@ font {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: white;
+}
+
+@media (min-width: 1440px) {
+  /* SECTION FONCTIONNEMENT */
+  .section__fonctionnement {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3rem 11rem 3rem 11rem;
+  }
+  .section__fonctionnement ul {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+  }
+  /* SECTION RESTAURANTS */
+  .section__restaurants {
+    padding: 1.88rem 11rem 1.88rem 11rem;
+  }
+  .section__restaurants__title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+    display: flex;
+    align-self: flex-start;
+    align-content: center;
+  }
+  .section__restaurants .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 3rem;
+    -moz-column-gap: 6rem;
+         column-gap: 6rem;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1.38rem 1.56rem;
+    background-color: #353535;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1.56rem 1.88rem 1.56rem 1.88rem;
+  }
+  .footer h2 {
+    font-family: "Shrikhand", serif;
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .footer__ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer__ul a {
+    text-decoration: none;
+    color: white;
+  }
+  .footer__ul i {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  .footer__ul__subtitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .footer__ul__contact {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: white;
+  }
+  .footer__ul__mentions {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: white;
+  }
+  .footer h2 {
+    font-family: "Shrikhand", serif;
+    color: white;
+    font-size: 1.1rem;
+    margin: 3rem 0rem 0rem 1rem;
+  }
+  .footer__ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+  }
 }/*# sourceMappingURL=index.css.map */

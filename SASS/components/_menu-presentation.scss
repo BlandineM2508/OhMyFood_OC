@@ -10,6 +10,8 @@
     top: 13.5rem;
 
 
+
+
     &__like {
         position: absolute;
         bottom: 1.5rem;
@@ -56,6 +58,21 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        opacity: 0;
+        animation-duration: 1.5s; 
+        animation-name: glissement;
+        animation-fill-mode: forwards;
+        
+        @keyframes glissement {
+            from {
+                margin-left: 100%; 
+            }
+
+            to {
+                margin-left: 0%;   
+                opacity: 1;
+            }
+        }
 
 
         h2 {
@@ -154,6 +171,7 @@
                         right: 6rem;
                         animation-duration: 500ms;
                         animation-name: slidein;
+
                         @keyframes slidein {
 
                             from {
@@ -177,6 +195,7 @@
                     width: 4.5rem;
                     animation-duration: 500ms;
                     animation-name: slidein;
+
                     @keyframes slidein {
 
                         from {
@@ -211,7 +230,25 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        animation-delay: 1s;
+        animation-duration: 1.5s; 
+        animation-name: glissement;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        
+        @keyframes glissement {
+            from {
+                margin-left: 100%; 
 
+            }
+
+            to {
+                margin-left: 0%;  
+                opacity: 1;
+            }            
+        }
+
+       
 
         h2 {
             display: flex;
@@ -362,6 +399,24 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        animation-delay: 2s;
+        animation-duration: 1.5s; 
+        animation-name: glissement;
+        opacity: 0;
+        animation-fill-mode: forwards;
+        
+        @keyframes glissement {
+            from {
+                margin-left: 100%; 
+
+            }
+
+            to {
+                margin-left: 0%;  
+                opacity: 1;
+            }            
+        }
+
 
         h2 {
             display: flex;
@@ -514,4 +569,4 @@
         height: auto;
         margin-bottom: 2.5rem;
     }
-} 
+}

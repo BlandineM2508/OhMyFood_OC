@@ -150,6 +150,19 @@ font {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  opacity: 0;
+  animation-duration: 1.5s;
+  animation-name: glissement;
+  animation-fill-mode: forwards;
+}
+@keyframes glissement {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
 }
 .menu__presentation__entrees h2 {
   display: flex;
@@ -279,6 +292,20 @@ font {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  animation-delay: 1s;
+  animation-duration: 1.5s;
+  animation-name: glissement;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes glissement {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
 }
 .menu__presentation__plats h2 {
   display: flex;
@@ -408,6 +435,20 @@ font {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  animation-delay: 2s;
+  animation-duration: 1.5s;
+  animation-name: glissement;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes glissement {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0%;
+    opacity: 1;
+  }
 }
 .menu__presentation__desserts h2 {
   display: flex;

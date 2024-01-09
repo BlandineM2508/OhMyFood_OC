@@ -8,19 +8,21 @@
     width: 100%;
 
 
-
     h2 {
         @include font-h1 ($white);
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
-
+    
 
     &__ul {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
 
+
+       
+    
 
         a {
             text-decoration: none;
