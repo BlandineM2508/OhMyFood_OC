@@ -1,0 +1,238 @@
+@mixin menu {
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+    gap: 2.5rem;
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+    padding: 2rem 1rem 0rem 1rem;
+    top: 13.5rem;
+
+    &__like {
+        position: absolute;
+        bottom: 1.5rem;
+        top: 2.2rem;
+        right: 10%;
+        width: 1.375rem;
+        height: 1.3125rem;
+
+
+        &--display {
+            position: absolute;
+            bottom: 1.5rem;
+            top: 2.2rem;
+            right: 10%;
+            width: 1.375rem;
+            height: 1.3125rem;
+            opacity: 0;
+            cursor: pointer;
+            transition: 300ms;
+
+            &:hover {
+                opacity: 1;
+                transform: scale(110%);
+            }
+
+            &:active {
+                opacity: 1;
+                transform: scale(110%);
+            }
+        }
+    }
+
+    &__title {
+        display: flex;
+        justify-content: center;
+        align-self: flex-start;
+        @include font-h1 ($black);
+        font-size: 1.75rem
+    }
+
+    &__presentation {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        opacity: 0;
+        animation-name: glissement;
+        animation-fill-mode: forwards;
+
+        @keyframes glissement {
+            from {
+                margin-left: 100%;
+            }
+
+            to {
+                margin-left: 0%;
+                opacity: 1;
+            }
+        }
+
+        &__title {
+            display: flex;
+            align-self: flex-start;
+            @include font-subtitle-2 ($black);
+            border-bottom: 2px solid $light-green;
+            padding-bottom: 0.2rem;
+            width: 2.5rem;
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background-color: $white;
+            border-radius: 0.9rem;
+            box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.10);
+            width: 100%;
+            padding: 1rem;
+            gap: 0.3rem;
+            overflow: hidden;
+            position: relative;
+
+
+            &__card-content {
+                @include font-subtitle-2($black);
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                width: 100%;
+                flex-direction: column;
+                gap: 0.3rem;
+                padding-right: 2rem;
+
+
+                .title {
+                    display: inline-block;
+                    align-items: center;
+                    justify-content: flex-start;
+                    @include font-btn ($black);
+                    font-size: 1rem;
+                    line-height: normal;
+                }
+
+
+                .subtitle {
+                    display: inline-block;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    @include font-subtitle-2 ($black);
+                    line-height: normal;                   
+                }
+
+
+                .price {
+                    position: absolute;
+                    right: 0.8rem;
+                    bottom: 1rem;
+                    color: $dark-grey;
+                    font-weight: 700;
+                }
+
+            }
+
+
+            .check {
+                display: none;
+                height: 4.7rem;
+                position: relative;
+                right: -1rem;
+                bottom: 3.98rem;
+                align-self: flex-end;
+            }
+
+
+            &:hover {
+                
+                height: 4.67rem;
+
+                .title {
+                    @include font-btn ($black);
+                    font-size: 1rem;
+                    display: inline-block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    width: 70%;
+                }
+
+                .subtitle {
+                    width: 70%;
+                    display: inline-block;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    @include font-subtitle-2 ($black);
+
+
+                }
+
+                .price {
+                    position: absolute;
+                    right: 4.5rem;
+                    animation-duration: 500ms;
+                    animation-name: slidein;
+                    @keyframes slidein {
+
+                        from {
+                            margin-right: -4rem;
+
+                        }
+
+                        to {
+                            margin-right: 0rem;
+
+                        }
+                    }
+                }
+
+                .check {
+                    display: flex;
+                    position: relative;
+                    width: 5rem;
+                    right: -1.6rem;
+
+                    animation-duration: 500ms;
+                    animation-name: slidein;
+
+                    @keyframes slidein {
+
+                        from {
+                            margin-right: -4rem;
+
+                        }
+
+                        to {
+                            margin-right: 0rem;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__btn {
+        @include btn;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        width: 11rem;
+        height: auto;
+        margin-bottom: 2.5rem;
+    }
+}
+
+.animation-entrees {
+    animation-duration: 1s;
+}
+
+.animation-plats {
+    animation-duration: 1.5s;
+}
+
+.animation-desserts {
+    animation-duration: 2s;
+}

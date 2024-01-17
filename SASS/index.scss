@@ -5,14 +5,34 @@
 @import "./components/button";
 @import "./components/header";
 @import "./components/footer";
+@import "./components/loader";
 
+//LOADER//
+
+.loader {
+    @include loader;
+}
+
+.container {
+    animation-name: delay;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-delay: 5.30s;
+    opacity: 0;
+
+    @keyframes delay {
+        to {
+            opacity: 1;
+
+        }
+    }
+}
 
 //HEADER//
 
 .header {
     @include header;
 }
-
 
 //MAIN//
 
@@ -26,30 +46,25 @@
     gap: 1rem;
     background-color: $light-grey;
 
-
     &__title {
         @include font-h2;
         width: 70%;
         font-size: 1.5rem;
         text-align: center;
         margin-top: 2.5rem;
-
     }
 
-    &__p {
+    &__text {
         @include font-subtitle-2 ($dark-grey);
         width: 90%;
         font-size: 1.1rem;
         text-align: center;
         margin-bottom: 1rem;
-
     }
 
-    input {
+    &__btn {
         @include btn;
     }
-
-
 }
 
 .section__fonctionnement {
@@ -65,7 +80,6 @@
         margin: 3rem 0rem 2rem 0.78rem;
     }
 
-
     &__li {
         display: flex;
         flex-direction: row;
@@ -80,8 +94,7 @@
         @include font-btn (black);
         align-items: center;
 
-
-        &__p {
+        &__numero {
             position: absolute;
             right: 19rem;
             display: flex;
@@ -96,8 +109,7 @@
             color: $white;
         }
 
-
-        img {
+        &__icone {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -106,7 +118,7 @@
             margin-left: 3rem;
         }
 
-        &__p2 {
+        &__text {
 
             display: flex;
             align-items: center;
@@ -116,7 +128,7 @@
 }
 
 .section__restaurants {
-
+    width: 100%;
     background-color: $light-grey;
     padding-top: 1rem;
     display: flex;
@@ -125,7 +137,6 @@
     align-items: center;
     padding: 3.37rem 1rem 4.12rem 1rem;
     gap: 1.5rem;
-
 
     &__title {
         @include font-h2;
@@ -139,15 +150,11 @@
         flex-direction: column;
         gap: 1.5rem;
 
-
-        .restaurants__cards {
+        &__card {
             display: flex;
             border-radius: 1rem;
             position: relative;
-
-
-
-
+            background-color: $white;
 
             &__like {
                 position: absolute;
@@ -181,28 +188,18 @@
                         transform: scale(110%);
 
                     }
-
-
-
-
                 }
-
-
             }
 
-
-
-            .restaurants__cards__link {
+            &__link {
                 width: 100%;
                 position: relative;
                 display: flex;
                 flex-direction: column;
                 border-radius: 1rem;
-                box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
                 text-decoration: none;
 
-
-                &__new {
+                &__badge {
                     position: absolute;
                     top: 1rem;
                     right: 1rem;
@@ -216,8 +213,9 @@
                     font-family: Roboto;
                     font-size: 0.875rem;
                     font-weight: 500;
+                    border-radius: 0.125rem;
+                    @include border-shadow;
                 }
-
 
                 &__img {
                     width: auto;
@@ -232,7 +230,6 @@
                     object-fit: cover;
                     object-position: 0% 62%;
                 }
-
 
                 &__card-content {
                     display: flex;
@@ -252,16 +249,9 @@
                     }
                 }
             }
-
-
-
         }
-
     }
-
-
 }
-
 
 //FOOTER//
 
@@ -270,38 +260,95 @@
 }
 
 
-@media (min-width: 1440px) {
+@media (min-width: 760px) {
+
 
     /* SECTION FONCTIONNEMENT */
 
     .section__fonctionnement {
 
+        &__title {
+            margin-left: 7rem;
+        }
+    }
+
+    /* SECTION RESTAURANTS */
+
+    .section__restaurants {
+        padding: 1.88rem 7rem 1.88rem 7rem;
+
+        &__title {
+            @include font-h2;
+            margin: 0;
+            display: flex;
+            align-self: flex-start;
+            align-content: center;
+        }
+
+        .restaurants {
+            display: grid;
+            grid-template-columns: 46% 46%;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 3rem;
+            column-gap: 3rem;
+        }
+    }
+
+    .footer {
+        @include footer;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1.56rem 1.88rem 1.56rem 1.88rem;
+
+        h2 {
+            @include font-h1 ($white);
+            font-size: 1.1rem;
+            margin: 3rem 0rem 0rem 1rem;
+        }
+
+        &__ul {
+            display: flex;
+            flex-direction: row;
+            margin-top: 3rem;
+        }
+    }
+}
+
+
+@media (min-width: 1440px) {
+
+    /* SECTION FONCTIONNEMENT */
+
+    .section__fonctionnement {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
-
+        gap: 2rem;
         padding: 3rem 11rem 3rem 11rem;
+
+        &__title {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0;
+
+        }
 
         ul {
             display: flex;
             flex-direction: row;
             gap: 3rem;
-
-
-
         }
-
     }
 
     /* SECTION RESTAURANTS */
 
-
     .section__restaurants {
-
         padding: 1.88rem 11rem 1.88rem 11rem;
-
 
         &__title {
             @include font-h2;
@@ -317,10 +364,29 @@
             grid-template-rows: 1fr 1fr;
             row-gap: 3rem;
             column-gap: 6rem;
+
+
+            &__card {
+
+                &__link {
+
+                    &__img {
+                        width: auto;
+                        height: 12rem;
+                        border-radius: 1rem 1rem 0rem 0rem;
+                        object-fit: cover;
+                        object-position: 0% 70%;
+                    }
+
+                    &__img--center {
+                        border-radius: 1rem 1rem 0rem 0rem;
+                        object-fit: cover;
+                        object-position: 0% 55%;
+                    }
+                }
+            }
         }
     }
-
-
 
     .footer {
         @include footer;
@@ -333,7 +399,7 @@
         h2 {
             @include font-h1 ($white);
             font-size: 1.1rem;
-            margin: 3rem 0rem 0rem 1rem;           
+            margin: 3rem 0rem 0rem 1rem;
         }
 
         &__ul {

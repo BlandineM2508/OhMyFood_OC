@@ -1,0 +1,190 @@
+@mixin loader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 30rem;
+    left: 0%;
+    animation-name: display;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+    visibility: visible;
+    animation-duration: 0.3s;
+    opacity: 1;
+
+    @keyframes display {
+
+        to {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    .egg1 {
+        width: 6rem;
+        height: 6rem;
+        display: flex;
+        margin: -0.8rem;
+        position: relative;
+        animation-name: bounce1;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        
+    }
+
+    @keyframes bounce1 {
+
+        0% {
+            transform: translateY(0rem);
+        }
+
+        50% {
+            transform: translateY(-3rem);
+        }
+
+        100% {
+            transform: translateY(0rem);
+        }
+
+    }
+
+
+    .egg1::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) skew(-10deg, 10deg) rotate(-15deg);
+        width: 3.5em;
+        height: 3.5rem;
+        background: #fff;
+        background-image:
+            radial-gradient(circle 0.2rem, #fff6 90%, transparent 10%),
+            radial-gradient(circle 0.8rem, #ffc400 90%, transparent 10%),
+            radial-gradient(circle 0.8rem, #ffae00 100%, transparent 0);
+        background-repeat: no-repeat;
+       
+        box-shadow: -0.125rem -0.188rem rgba(0, 0, 0, 0.527) inset, 0 0 0.25rem rgba(41, 39, 39, 0.233) inset;
+        border-radius: 83% 67% 72% 91% / 80% 85% 99% 97%;
+        animation: border-egg 0.6s ease-in-out infinite alternate;
+    }
+
+    @keyframes border-egg {
+        to {
+            border-radius: 100% 100% 100% 100%;        
+        }
+    }
+
+    .egg2 {
+        width: 6rem;
+        height: 6rem;
+        display: flex;
+        margin: -0.8rem;
+        position: relative;
+        animation-name: bounce2;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+    }
+
+
+    @keyframes bounce2 {
+
+        0% {
+            transform: translateY(-3rem);
+        }
+
+        50% {
+            transform: translateY(0rem);
+        }
+
+        100% {
+            transform: translateY(-3rem);
+        }
+
+    }
+
+
+    .egg2::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) skew(-10deg, 10deg) rotate(-15deg);
+        width: 3.5rem;
+        height: 3.5rem;
+        background: #fff;
+        background-image:
+            radial-gradient(circle 0.2rem, #fff6 90%, transparent 10%),
+            radial-gradient(circle 0.8rem, #ffc400 90%, transparent 10%),
+            radial-gradient(circle 0.8rem, #ffae00 100%, transparent 0);
+        background-repeat: no-repeat;
+       
+        box-shadow: -0.125rem -0.188rem rgba(0, 0, 0, 0.527) inset, 0 0 0.25rem rgba(41, 39, 39, 0.233) inset;
+        border-radius: 83% 67% 72% 91% / 80% 85% 99% 97%;
+        animation: border-egg 0.6s ease-in-out infinite alternate;
+    }
+
+    @keyframes border-egg {
+        to {
+            border-radius: 100% 100% 100% 100%;    
+        }
+    }
+
+    .egg3 {
+        width: 6rem;
+        height: 6rem;
+        display: flex;
+        margin: -0.8rem;
+        position: relative;
+        animation-name: bounce3;
+        animation-timing-function: ease-in-out;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes bounce3 {
+
+        0% {
+            transform: translateY(0rem);
+        }
+
+        50% {
+            transform: translateY(-3rem);
+        }
+
+        100% {
+            transform: translateY(0rem);
+        }
+
+    }
+
+    .egg3::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) skew(-10deg, 10deg) rotate(-15deg);
+        width: 3.5rem;
+        height: 3.5rem;
+        background: #fff;
+        background-image:
+            radial-gradient(circle 0.2rem, #fff6 90%, transparent 10%),
+            radial-gradient(circle 0.8rem, #ffc400 90%, transparent 10%),
+            radial-gradient(circle 0.8rem, #ffae00 100%, transparent 0);
+        background-repeat: no-repeat;
+       
+        box-shadow:-0.125rem -0.188rem rgba(0, 0, 0, 0.527) inset, 0 0 0.25rem rgba(41, 39, 39, 0.233) inset;
+        border-radius: 83% 67% 72% 91% / 80% 85% 99% 97%;
+        animation: border-egg 0.6s ease-in-out infinite alternate;
+    }
+
+    @keyframes border-egg {
+        to {
+            border-radius: 100% 100% 100% 100%;     
+        }
+    }
+
+}
