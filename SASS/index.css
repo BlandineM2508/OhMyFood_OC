@@ -286,7 +286,7 @@ font {
   opacity: 1;
 }
 
-.cto {
+.section-cto {
   width: 100%;
   padding-bottom: 4rem;
   display: flex;
@@ -296,7 +296,7 @@ font {
   gap: 1rem;
   background-color: #F6F6F6;
 }
-.cto .title {
+.section-cto .title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
@@ -305,7 +305,7 @@ font {
   text-align: center;
   margin-top: 2.5rem;
 }
-.cto .text {
+.section-cto .text {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: #353535;
@@ -314,7 +314,7 @@ font {
   text-align: center;
   margin-bottom: 1rem;
 }
-.cto .btn {
+.section-cto .btn {
   text-align: center;
   border: none;
   border-radius: 1.5rem;
@@ -328,18 +328,18 @@ font {
   cursor: pointer;
   text-decoration: none;
 }
-.cto .btn:hover {
+.section-cto .btn:hover {
   background: linear-gradient(rgba(255, 121, 217, 0.8980392157), rgba(146, 86, 220, 0.8980392157));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
-.fonctionnement {
+.section-fonctionnement {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 3rem;
 }
-.fonctionnement .title {
+.section-fonctionnement .title {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
@@ -347,7 +347,7 @@ font {
   align-self: flex-start;
   margin: 3rem 0rem 2rem 0.78rem;
 }
-.fonctionnement .li {
+.section-fonctionnement .li {
   display: flex;
   flex-direction: row;
   position: relative;
@@ -364,7 +364,7 @@ font {
   font-size: 1rem;
   align-items: center;
 }
-.fonctionnement .li .numero {
+.section-fonctionnement .li .numero {
   position: absolute;
   right: 19rem;
   display: flex;
@@ -377,7 +377,7 @@ font {
   background-color: #9356DC;
   color: white;
 }
-.fonctionnement .li .icone {
+.section-fonctionnement .li .icone {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -385,7 +385,7 @@ font {
   width: 1rem;
   margin-left: 3rem;
 }
-.fonctionnement .li .text {
+.section-fonctionnement .li .text {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -555,7 +555,7 @@ font {
 
 @media (min-width: 960px) {
   /* SECTION FONCTIONNEMENT */
-  .fonctionnement .title {
+  .section-fonctionnement .title {
     margin-left: 7rem;
   }
   /* SECTION RESTAURANTS */
@@ -628,7 +628,7 @@ font {
     font-weight: 400;
     color: white;
   }
-  .footer h2 {
+  .footer h3 {
     font-family: "Shrikhand", serif;
     color: white;
     font-size: 1.1rem;
@@ -642,7 +642,7 @@ font {
 }
 @media (min-width: 1440px) {
   /* SECTION FONCTIONNEMENT */
-  .fonctionnement {
+  .section-fonctionnement {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -651,13 +651,13 @@ font {
     gap: 2rem;
     padding: 3rem 11rem 3rem 11rem;
   }
-  .fonctionnement .title {
+  .section-fonctionnement .title {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     margin: 0;
   }
-  .fonctionnement ul {
+  .section-fonctionnement ul {
     display: flex;
     flex-direction: row;
     gap: 3rem;
