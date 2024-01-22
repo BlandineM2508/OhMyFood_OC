@@ -295,6 +295,7 @@
         align-items: flex-start;
         justify-content: flex-start;
         padding: 1.56rem 1.88rem 1.56rem 1.88rem;
+        gap: 4rem;
 
         h3 {
             @include font-h1 ($white);
@@ -306,6 +307,7 @@
             display: flex;
             flex-direction: row;
             margin-top: 3rem;
+            gap: 1rem;
         }
     }
 }

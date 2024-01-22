@@ -590,6 +590,7 @@ font {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 1.56rem 1.88rem 1.56rem 1.88rem;
+    gap: 4rem;
   }
   .footer h3 {
     font-family: "Shrikhand", serif;
@@ -638,6 +639,7 @@ font {
     display: flex;
     flex-direction: row;
     margin-top: 3rem;
+    gap: 1rem;
   }
 }
 @media (min-width: 1440px) {
