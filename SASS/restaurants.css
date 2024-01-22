@@ -78,7 +78,7 @@ font {
   justify-content: center;
   flex-direction: column;
 }
-.header__title {
+.header .title {
   font-family: "Shrikhand", serif;
   color: black;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
@@ -90,7 +90,7 @@ font {
   font-size: 1.875rem;
   z-index: 2;
 }
-.header__back {
+.header .back {
   position: absolute;
   z-index: 3;
   left: 1rem;
@@ -102,7 +102,7 @@ font {
   flex-direction: column;
   position: relative;
 }
-.carte__photo {
+.carte .photo {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
@@ -121,42 +121,40 @@ font {
   padding: 2rem 1rem 0rem 1rem;
   top: 13.5rem;
 }
-.carte .menu__like {
+.carte .menu .title-menu {
+  align-self: flex-start;
+  font-family: "Shrikhand", serif;
+  color: black;
+  font-size: 1.75rem;
+}
+.carte .menu .like {
   position: absolute;
-  bottom: 1.5rem;
   top: 2.2rem;
-  right: 10%;
+  left: 85%;
   width: 1.375rem;
   height: 1.3125rem;
+  margin-right: 5rem;
 }
-.carte .menu__like--display {
+.carte .menu .display {
+  margin-right: 5rem;
   position: absolute;
-  bottom: 1.5rem;
   top: 2.2rem;
-  right: 10%;
+  left: 85%;
   width: 1.375rem;
   height: 1.3125rem;
   opacity: 0;
   cursor: pointer;
   transition: 300ms;
 }
-.carte .menu__like--display:hover {
+.carte .menu .display:hover {
   opacity: 1;
   transform: scale(110%);
 }
-.carte .menu__like--display:active {
+.carte .menu .display:active {
   opacity: 1;
   transform: scale(110%);
 }
-.carte .menu__title {
-  display: flex;
-  justify-content: center;
-  align-self: flex-start;
-  font-family: "Shrikhand", serif;
-  color: black;
-  font-size: 1.75rem;
-}
-.carte .menu__presentation {
+.carte .menu .presentation {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -175,7 +173,7 @@ font {
     opacity: 1;
   }
 }
-.carte .menu__presentation__title {
+.carte .menu .presentation .title-presentation {
   display: flex;
   align-self: flex-start;
   font-family: "Roboto", sans-serif;
@@ -185,7 +183,7 @@ font {
   padding-bottom: 0.2rem;
   width: 2.5rem;
 }
-.carte .menu__presentation__card {
+.carte .menu .presentation .card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -198,7 +196,7 @@ font {
   overflow: hidden;
   position: relative;
 }
-.carte .menu__presentation__card__card-content {
+.carte .menu .presentation .card .card-content {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   color: black;
@@ -210,7 +208,7 @@ font {
   gap: 0.3rem;
   padding-right: 2rem;
 }
-.carte .menu__presentation__card__card-content .title {
+.carte .menu .presentation .card .card-content .title {
   display: inline-block;
   align-items: center;
   justify-content: flex-start;
@@ -221,7 +219,7 @@ font {
   font-size: 1rem;
   line-height: normal;
 }
-.carte .menu__presentation__card__card-content .subtitle {
+.carte .menu .presentation .card .card-content .subtitle {
   display: inline-block;
   flex-direction: row;
   justify-content: space-between;
@@ -230,14 +228,14 @@ font {
   color: black;
   line-height: normal;
 }
-.carte .menu__presentation__card__card-content .price {
+.carte .menu .presentation .card .card-content .price {
   position: absolute;
   right: 0.8rem;
   bottom: 1rem;
   color: #353535;
   font-weight: 700;
 }
-.carte .menu__presentation__card .check {
+.carte .menu .presentation .card .check {
   display: none;
   height: 4.7rem;
   position: relative;
@@ -245,10 +243,10 @@ font {
   bottom: 3.98rem;
   align-self: flex-end;
 }
-.carte .menu__presentation__card:hover {
+.carte .menu .presentation .card:hover {
   height: 4.67rem;
 }
-.carte .menu__presentation__card:hover .title {
+.carte .menu .presentation .card:hover .title {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: black;
@@ -260,7 +258,7 @@ font {
   white-space: nowrap;
   width: 70%;
 }
-.carte .menu__presentation__card:hover .subtitle {
+.carte .menu .presentation .card:hover .subtitle {
   width: 70%;
   display: inline-block;
   overflow: hidden;
@@ -270,7 +268,7 @@ font {
   font-weight: 300;
   color: black;
 }
-.carte .menu__presentation__card:hover .price {
+.carte .menu .presentation .card:hover .price {
   position: absolute;
   right: 4.5rem;
   animation-duration: 500ms;
@@ -284,7 +282,7 @@ font {
     margin-right: 0rem;
   }
 }
-.carte .menu__presentation__card:hover .check {
+.carte .menu .presentation .card:hover .check {
   display: flex;
   position: relative;
   width: 5rem;
@@ -300,7 +298,7 @@ font {
     margin-right: 0rem;
   }
 }
-.carte .menu__btn {
+.carte .menu .btn {
   text-align: center;
   border: none;
   border-radius: 1.5rem;
@@ -312,6 +310,7 @@ font {
   padding: 0.81rem 1.17rem 0.81rem 1.17rem;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-self: center;
@@ -319,7 +318,7 @@ font {
   height: auto;
   margin-bottom: 2.5rem;
 }
-.carte .menu__btn:hover {
+.carte .menu .btn:hover {
   background: linear-gradient(rgba(255, 121, 217, 0.8980392157), rgba(146, 86, 220, 0.8980392157));
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
 }
@@ -332,26 +331,26 @@ font {
   width: 100%;
   margin-top: 13.5rem;
 }
-.footer h2 {
+.footer h3 {
   font-family: "Shrikhand", serif;
   color: white;
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
-.footer__ul {
+.footer .ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.footer__ul a {
+.footer .ul a {
   text-decoration: none;
   color: white;
 }
-.footer__ul i {
+.footer .ul i {
   width: 1.5rem;
   margin-right: 0.5rem;
 }
-.footer__ul__subtitle {
+.footer .ul .subtitle {
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   color: white;
@@ -359,13 +358,526 @@ font {
   flex-direction: row;
   gap: 0.5rem;
 }
-.footer__ul__contact {
+.footer .ul .contact {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: white;
 }
-.footer__ul__mentions {
+.footer .ul .mentions {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: white;
+}
+
+@media (min-width: 960px) {
+  .carte .menu {
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+    gap: 2.5rem;
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+    padding: 2rem 1rem 0rem 1rem;
+    top: 13.5rem;
+    padding: 2rem 5rem 0rem 5rem;
+    margin: 0rem 4rem 0rem 4rem;
+  }
+  .carte .menu .title-menu {
+    align-self: flex-start;
+    font-family: "Shrikhand", serif;
+    color: black;
+    font-size: 1.75rem;
+  }
+  .carte .menu .like {
+    position: absolute;
+    top: 2.2rem;
+    left: 85%;
+    width: 1.375rem;
+    height: 1.3125rem;
+    margin-right: 5rem;
+  }
+  .carte .menu .display {
+    margin-right: 5rem;
+    position: absolute;
+    top: 2.2rem;
+    left: 85%;
+    width: 1.375rem;
+    height: 1.3125rem;
+    opacity: 0;
+    cursor: pointer;
+    transition: 300ms;
+  }
+  .carte .menu .display:hover {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  .carte .menu .display:active {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  .carte .menu .presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    animation-name: glissement;
+    animation-fill-mode: forwards;
+  }
+  @keyframes glissement {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+      opacity: 1;
+    }
+  }
+  .carte .menu .presentation .title-presentation {
+    display: flex;
+    align-self: flex-start;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+    border-bottom: 2px solid #99E2D0;
+    padding-bottom: 0.2rem;
+    width: 2.5rem;
+  }
+  .carte .menu .presentation .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 0.9rem;
+    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 1rem;
+    gap: 0.3rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .carte .menu .presentation .card .card-content {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding-right: 2rem;
+  }
+  .carte .menu .presentation .card .card-content .title {
+    display: inline-block;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: black;
+    font-size: 1rem;
+    font-size: 1rem;
+    line-height: normal;
+  }
+  .carte .menu .presentation .card .card-content .subtitle {
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+    line-height: normal;
+  }
+  .carte .menu .presentation .card .card-content .price {
+    position: absolute;
+    right: 0.8rem;
+    bottom: 1rem;
+    color: #353535;
+    font-weight: 700;
+  }
+  .carte .menu .presentation .card .check {
+    display: none;
+    height: 4.7rem;
+    position: relative;
+    right: -1rem;
+    bottom: 3.98rem;
+    align-self: flex-end;
+  }
+  .carte .menu .presentation .card:hover {
+    height: 4.67rem;
+  }
+  .carte .menu .presentation .card:hover .title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: black;
+    font-size: 1rem;
+    font-size: 1rem;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70%;
+  }
+  .carte .menu .presentation .card:hover .subtitle {
+    width: 70%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+  }
+  .carte .menu .presentation .card:hover .price {
+    position: absolute;
+    right: 4.5rem;
+    animation-duration: 500ms;
+    animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+      margin-right: -4rem;
+    }
+    to {
+      margin-right: 0rem;
+    }
+  }
+  .carte .menu .presentation .card:hover .check {
+    display: flex;
+    position: relative;
+    width: 5rem;
+    right: -1.6rem;
+    animation-duration: 500ms;
+    animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+      margin-right: -4rem;
+    }
+    to {
+      margin-right: 0rem;
+    }
+  }
+  .carte .menu .btn {
+    text-align: center;
+    border: none;
+    border-radius: 1.5rem;
+    background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 124%);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1rem;
+    padding: 0.81rem 1.17rem 0.81rem 1.17rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 11rem;
+    height: auto;
+    margin-bottom: 2.5rem;
+  }
+  .carte .menu .btn:hover {
+    background: linear-gradient(rgba(255, 121, 217, 0.8980392157), rgba(146, 86, 220, 0.8980392157));
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+  }
+  .carte .menu .title-menu {
+    align-self: center;
+  }
+  .carte .menu .like {
+    left: 72%;
+  }
+  .carte .menu .display {
+    left: 72%;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    padding: 1.38rem 1.56rem;
+    background-color: #353535;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1.56rem 1.88rem 1.56rem 1.88rem;
+    gap: 4rem;
+  }
+  .footer h3 {
+    font-family: "Shrikhand", serif;
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .footer .ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .footer .ul a {
+    text-decoration: none;
+    color: white;
+  }
+  .footer .ul i {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+  }
+  .footer .ul .subtitle {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+  .footer .ul .contact {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: white;
+  }
+  .footer .ul .mentions {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: white;
+  }
+  .footer h3 {
+    font-family: "Shrikhand", serif;
+    color: white;
+    font-size: 1.1rem;
+    margin: 3rem 0rem 0rem 1rem;
+  }
+  .footer .ul {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3rem;
+    gap: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  .carte .menu {
+    background-color: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: relative;
+    gap: 2.5rem;
+    border-radius: 2.5rem 2.5rem 0rem 0rem;
+    padding: 2rem 1rem 0rem 1rem;
+    top: 13.5rem;
+    padding: 2rem 13rem 0rem 13rem;
+    margin: 0rem 10rem 0rem 10rem;
+  }
+  .carte .menu .title-menu {
+    align-self: flex-start;
+    font-family: "Shrikhand", serif;
+    color: black;
+    font-size: 1.75rem;
+  }
+  .carte .menu .like {
+    position: absolute;
+    top: 2.2rem;
+    left: 85%;
+    width: 1.375rem;
+    height: 1.3125rem;
+    margin-right: 5rem;
+  }
+  .carte .menu .display {
+    margin-right: 5rem;
+    position: absolute;
+    top: 2.2rem;
+    left: 85%;
+    width: 1.375rem;
+    height: 1.3125rem;
+    opacity: 0;
+    cursor: pointer;
+    transition: 300ms;
+  }
+  .carte .menu .display:hover {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  .carte .menu .display:active {
+    opacity: 1;
+    transform: scale(110%);
+  }
+  .carte .menu .presentation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    animation-name: glissement;
+    animation-fill-mode: forwards;
+  }
+  @keyframes glissement {
+    from {
+      margin-left: 100%;
+    }
+    to {
+      margin-left: 0%;
+      opacity: 1;
+    }
+  }
+  .carte .menu .presentation .title-presentation {
+    display: flex;
+    align-self: flex-start;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+    border-bottom: 2px solid #99E2D0;
+    padding-bottom: 0.2rem;
+    width: 2.5rem;
+  }
+  .carte .menu .presentation .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: white;
+    border-radius: 0.9rem;
+    box-shadow: 0px 4.011px 15.043px 0px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 1rem;
+    gap: 0.3rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .carte .menu .presentation .card .card-content {
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding-right: 2rem;
+  }
+  .carte .menu .presentation .card .card-content .title {
+    display: inline-block;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: black;
+    font-size: 1rem;
+    font-size: 1rem;
+    line-height: normal;
+  }
+  .carte .menu .presentation .card .card-content .subtitle {
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+    line-height: normal;
+  }
+  .carte .menu .presentation .card .card-content .price {
+    position: absolute;
+    right: 0.8rem;
+    bottom: 1rem;
+    color: #353535;
+    font-weight: 700;
+  }
+  .carte .menu .presentation .card .check {
+    display: none;
+    height: 4.7rem;
+    position: relative;
+    right: -1rem;
+    bottom: 3.98rem;
+    align-self: flex-end;
+  }
+  .carte .menu .presentation .card:hover {
+    height: 4.67rem;
+  }
+  .carte .menu .presentation .card:hover .title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: black;
+    font-size: 1rem;
+    font-size: 1rem;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70%;
+  }
+  .carte .menu .presentation .card:hover .subtitle {
+    width: 70%;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+  }
+  .carte .menu .presentation .card:hover .price {
+    position: absolute;
+    right: 4.5rem;
+    animation-duration: 500ms;
+    animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+      margin-right: -4rem;
+    }
+    to {
+      margin-right: 0rem;
+    }
+  }
+  .carte .menu .presentation .card:hover .check {
+    display: flex;
+    position: relative;
+    width: 5rem;
+    right: -1.6rem;
+    animation-duration: 500ms;
+    animation-name: slidein;
+  }
+  @keyframes slidein {
+    from {
+      margin-right: -4rem;
+    }
+    to {
+      margin-right: 0rem;
+    }
+  }
+  .carte .menu .btn {
+    text-align: center;
+    border: none;
+    border-radius: 1.5rem;
+    background: linear-gradient(0deg, #9356DC -11.44%, #FF79DA 124%);
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 1rem;
+    padding: 0.81rem 1.17rem 0.81rem 1.17rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 11rem;
+    height: auto;
+    margin-bottom: 2.5rem;
+  }
+  .carte .menu .btn:hover {
+    background: linear-gradient(rgba(255, 121, 217, 0.8980392157), rgba(146, 86, 220, 0.8980392157));
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.4);
+  }
+  .carte .menu .title-menu {
+    align-self: center;
+  }
+  .carte .menu .like {
+    left: 64%;
+  }
+  .carte .menu .display {
+    left: 64%;
+  }
 }/*# sourceMappingURL=restaurants.css.map */

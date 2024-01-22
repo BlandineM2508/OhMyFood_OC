@@ -17,7 +17,7 @@
     animation-name: delay;
     animation-duration: 1s;
     animation-fill-mode: forwards;
-    animation-delay: 5.30s;
+    animation-delay: 2.30s;
     opacity: 0;
 
     @keyframes delay {
@@ -36,7 +36,7 @@
 
 //MAIN//
 
-.section__cto {
+.cto {
     width: 100%;
     padding-bottom: 4rem;
     display: flex;
@@ -46,7 +46,7 @@
     gap: 1rem;
     background-color: $light-grey;
 
-    &__title {
+    .title {
         @include font-h2;
         width: 70%;
         font-size: 1.5rem;
@@ -54,7 +54,7 @@
         margin-top: 2.5rem;
     }
 
-    &__text {
+    .text {
         @include font-subtitle-2 ($dark-grey);
         width: 90%;
         font-size: 1.1rem;
@@ -62,25 +62,25 @@
         margin-bottom: 1rem;
     }
 
-    &__btn {
+    .btn {
         @include btn;
     }
 }
 
-.section__fonctionnement {
+.fonctionnement {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 3rem;
 
-    &__title {
+    .title {
         @include font-h2;
         display: flex;
         align-self: flex-start;
         margin: 3rem 0rem 2rem 0.78rem;
     }
 
-    &__li {
+    .li {
         display: flex;
         flex-direction: row;
         position: relative;
@@ -94,7 +94,7 @@
         @include font-btn (black);
         align-items: center;
 
-        &__numero {
+        .numero {
             position: absolute;
             right: 19rem;
             display: flex;
@@ -109,7 +109,7 @@
             color: $white;
         }
 
-        &__icone {
+        .icone {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -118,7 +118,7 @@
             margin-left: 3rem;
         }
 
-        &__text {
+        .text {
 
             display: flex;
             align-items: center;
@@ -127,7 +127,7 @@
     }
 }
 
-.section__restaurants {
+.section-restaurants {
     width: 100%;
     background-color: $light-grey;
     padding-top: 1rem;
@@ -138,7 +138,7 @@
     padding: 3.37rem 1rem 4.12rem 1rem;
     gap: 1.5rem;
 
-    &__title {
+    .title {
         @include font-h2;
         margin: 0;
         align-self: flex-start;
@@ -150,48 +150,42 @@
         flex-direction: column;
         gap: 1.5rem;
 
-        &__card {
+        .card {
             display: flex;
             border-radius: 1rem;
             position: relative;
             background-color: $white;
 
-            &__like {
+            .like {
+                position: absolute;
+                bottom: 1.5rem;
+                left: 88%;
+                width: 1.375rem;
+                height: 1.3125rem;              
+            }
+
+            .display {
                 position: absolute;
                 bottom: 1.5rem;
                 left: 88%;
                 width: 1.375rem;
                 height: 1.3125rem;
+                opacity: 0;
+                cursor: pointer;
+                transition: 300ms;
 
+                &:hover {
+                    opacity: 1;
+                    transform: scale(110%);
+                }
 
-                &--display {
-
-                    position: absolute;
-                    bottom: 1.5rem;
-                    left: 88%;
-                    width: 1.375rem;
-                    height: 1.3125rem;
-                    opacity: 0;
-                    cursor: pointer;
-                    transition: 300ms;
-
-
-                    &:hover {
-                        opacity: 1;
-                        transform: scale(110%);
-
-
-                    }
-
-                    &:active {
-                        opacity: 1;
-                        transform: scale(110%);
-
-                    }
+                &:active {
+                    opacity: 1;
+                    transform: scale(110%);
                 }
             }
 
-            &__link {
+            .link {
                 width: 100%;
                 position: relative;
                 display: flex;
@@ -199,7 +193,7 @@
                 border-radius: 1rem;
                 text-decoration: none;
 
-                &__badge {
+                .badge {
                     position: absolute;
                     top: 1rem;
                     right: 1rem;
@@ -217,7 +211,7 @@
                     @include border-shadow;
                 }
 
-                &__img {
+                .img {
                     width: auto;
                     height: 12rem;
                     border-radius: 1rem 1rem 0rem 0rem;
@@ -225,13 +219,13 @@
                     object-position: 0% 100%;
                 }
 
-                &__img--center {
+                .img--center {
                     border-radius: 1rem 1rem 0rem 0rem;
                     object-fit: cover;
                     object-position: 0% 62%;
                 }
 
-                &__card-content {
+                .card-content {
                     display: flex;
                     flex-direction: column;
                     gap: 0.3rem;
@@ -239,11 +233,11 @@
                     padding: 1rem 1rem 0.75rem 0.8rem;
 
 
-                    &__title {
+                    .title {
                         @include font-title-cards ($black);
                     }
 
-                    &__subtitle {
+                    .subtitle {
                         @include font-subtitle-2 ($black);
                         font-size: 1rem;
                     }
@@ -260,24 +254,24 @@
 }
 
 
-@media (min-width: 760px) {
+@media (min-width: 960px) {
 
 
     /* SECTION FONCTIONNEMENT */
 
-    .section__fonctionnement {
+    .fonctionnement {
 
-        &__title {
+        .title {
             margin-left: 7rem;
         }
     }
 
     /* SECTION RESTAURANTS */
 
-    .section__restaurants {
+    .section-restaurants {
         padding: 1.88rem 7rem 1.88rem 7rem;
 
-        &__title {
+        .title {
             @include font-h2;
             margin: 0;
             display: flex;
@@ -308,7 +302,7 @@
             margin: 3rem 0rem 0rem 1rem;
         }
 
-        &__ul {
+        .ul {
             display: flex;
             flex-direction: row;
             margin-top: 3rem;
@@ -321,7 +315,7 @@
 
     /* SECTION FONCTIONNEMENT */
 
-    .section__fonctionnement {
+    .fonctionnement {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -330,7 +324,7 @@
         gap: 2rem;
         padding: 3rem 11rem 3rem 11rem;
 
-        &__title {
+        .title {
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -347,10 +341,10 @@
 
     /* SECTION RESTAURANTS */
 
-    .section__restaurants {
+    .section-restaurants {
         padding: 1.88rem 11rem 1.88rem 11rem;
 
-        &__title {
+        .title {
             @include font-h2;
             margin: 0;
             display: flex;
@@ -366,11 +360,11 @@
             column-gap: 6rem;
 
 
-            &__card {
+            .card {
 
-                &__link {
+                .link {
 
-                    &__img {
+                    .img {
                         width: auto;
                         height: 12rem;
                         border-radius: 1rem 1rem 0rem 0rem;
@@ -378,7 +372,7 @@
                         object-position: 0% 70%;
                     }
 
-                    &__img--center {
+                    .img--center {
                         border-radius: 1rem 1rem 0rem 0rem;
                         object-fit: cover;
                         object-position: 0% 55%;
@@ -388,24 +382,5 @@
         }
     }
 
-    .footer {
-        @include footer;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 1.56rem 1.88rem 1.56rem 1.88rem;
-
-        h2 {
-            @include font-h1 ($white);
-            font-size: 1.1rem;
-            margin: 3rem 0rem 0rem 1rem;
-        }
-
-        &__ul {
-            display: flex;
-            flex-direction: row;
-            margin-top: 3rem;
-        }
-    }
+   
 }

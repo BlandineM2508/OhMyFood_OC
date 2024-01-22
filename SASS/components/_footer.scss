@@ -7,37 +7,28 @@
     background-color: $dark-grey;
     width: 100%;
 
-
-    h2 {
+    h3 {
         @include font-h1 ($white);
         font-size: 1.1rem;
         margin-bottom: 1rem;
     }
     
-
-    &__ul {
+    .ul {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
-
-
-       
-    
 
         a {
             text-decoration: none;
             color: $white;
         }
 
-
-
-
         i {
             width: 1.5rem;
             margin-right: 0.5rem;
         }
 
-        &__subtitle {
+        .subtitle {
             @include font-subtitle ($white);
             display: flex;
             flex-direction: row;
@@ -45,12 +36,12 @@
 
         }
 
-        &__contact {
+        .contact {
             @include font-subtitle-3 ($white);
 
         }
 
-        &__mentions {
+        .mentions {
             @include font-subtitle-3 ($white);
         }
     }

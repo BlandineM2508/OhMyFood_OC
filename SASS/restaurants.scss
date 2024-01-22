@@ -6,7 +6,6 @@
 @import "./components/header-restaurants";
 @import "./components/footer";
 @import "./components/menu";
-@import "./components/loader";
 
 
 //HEADER//
@@ -22,7 +21,7 @@
     flex-direction: column;
     position: relative;
 
-    &__photo {
+    .photo {
         object-fit: cover;
         width: 100%;
         height: 17rem;
@@ -43,3 +42,71 @@
     margin-top: 13.5rem;
 }
 
+@media (min-width: 960px) {
+
+    .carte {
+        .menu {
+            @include menu;
+            padding: 2rem 5rem 0rem 5rem;
+            margin: 0rem 4rem 0rem 4rem;
+
+            .title-menu {
+                align-self: center;
+            }
+
+            .like {
+                left: 72%;
+            }
+
+            .display {
+                left: 72%;
+            }
+        }
+    }
+
+    .footer {
+        @include footer;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1.56rem 1.88rem 1.56rem 1.88rem;
+        gap: 4rem;
+
+        h3 {
+            @include font-h1 ($white);
+            font-size: 1.1rem;
+            margin: 3rem 0rem 0rem 1rem;
+        }
+
+        .ul {
+            display: flex;
+            flex-direction: row;
+            margin-top: 3rem;
+            gap: 1rem;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .carte {
+        .menu {
+            @include menu;
+            padding: 2rem 13rem 0rem 13rem;
+            margin: 0rem 10rem 0rem 10rem;
+
+            .title-menu {
+                align-self: center;
+            }
+
+            .like {
+                left: 64%
+            }
+
+            .display {
+                left: 64%
+            }
+        }
+    }
+}

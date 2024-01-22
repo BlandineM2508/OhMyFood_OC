@@ -1,14 +1,11 @@
 @mixin header-restaurants 
 
-{
-    
+{   
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
 
-
-    &__title {
+    .title {
         @include font-h1 ($black);
         @include border-shadow;
         display: flex;
@@ -19,14 +16,11 @@
         z-index: 2;
     }
    
-    &__back {
+    .back {
         position: absolute;
         z-index: 3;
         left: 1rem;
         top: 0.9rem;
        
-       }
-
-  
-    
+       }     
 }

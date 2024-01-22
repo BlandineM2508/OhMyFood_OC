@@ -9,47 +9,62 @@
     padding: 2rem 1rem 0rem 1rem;
     top: 13.5rem;
 
-    &__like {
-        position: absolute;
-        bottom: 1.5rem;
-        top: 2.2rem;
-        right: 10%;
-        width: 1.375rem;
-        height: 1.3125rem;
 
 
-        &--display {
-            position: absolute;
-            bottom: 1.5rem;
-            top: 2.2rem;
-            right: 10%;
-            width: 1.375rem;
-            height: 1.3125rem;
-            opacity: 0;
-            cursor: pointer;
-            transition: 300ms;
 
-            &:hover {
-                opacity: 1;
-                transform: scale(110%);
-            }
+    .title-menu {
 
-            &:active {
-                opacity: 1;
-                transform: scale(110%);
-            }
-        }
-    }
-
-    &__title {
-        display: flex;
-        justify-content: center;
         align-self: flex-start;
         @include font-h1 ($black);
-        font-size: 1.75rem
+        font-size: 1.75rem;
+       
     }
 
-    &__presentation {
+
+
+
+    .like {
+        position: absolute;
+        top: 2.2rem;
+        left: 85%;
+        width: 1.375rem;
+        height: 1.3125rem;
+        margin-right: 5rem;
+
+
+    }
+
+    .display {
+        margin-right: 5rem;
+        position: absolute;
+        top: 2.2rem;
+        left: 85%;
+        width: 1.375rem;
+        height: 1.3125rem;
+        opacity: 0;
+        cursor: pointer;
+        transition: 300ms;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(110%);
+        }
+
+        &:active {
+            opacity: 1;
+            transform: scale(110%);
+        }
+
+
+    }
+
+
+
+
+
+
+
+    .presentation {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -70,7 +85,7 @@
             }
         }
 
-        &__title {
+        .title-presentation {
             display: flex;
             align-self: flex-start;
             @include font-subtitle-2 ($black);
@@ -79,7 +94,7 @@
             width: 2.5rem;
         }
 
-        &__card {
+        .card {
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -93,7 +108,7 @@
             position: relative;
 
 
-            &__card-content {
+            .card-content {
                 @include font-subtitle-2($black);
                 display: flex;
                 justify-content: center;
@@ -119,7 +134,7 @@
                     flex-direction: row;
                     justify-content: space-between;
                     @include font-subtitle-2 ($black);
-                    line-height: normal;                   
+                    line-height: normal;
                 }
 
 
@@ -145,7 +160,7 @@
 
 
             &:hover {
-                
+
                 height: 4.67rem;
 
                 .title {
@@ -174,6 +189,7 @@
                     right: 4.5rem;
                     animation-duration: 500ms;
                     animation-name: slidein;
+
                     @keyframes slidein {
 
                         from {
@@ -214,7 +230,7 @@
         }
     }
 
-    &__btn {
+    .btn {
         @include btn;
         display: flex;
         justify-content: center;
