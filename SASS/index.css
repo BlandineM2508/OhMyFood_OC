@@ -578,6 +578,7 @@ font {
     row-gap: 3rem;
     -moz-column-gap: 3rem;
          column-gap: 3rem;
+    max-width: 70rem;
   }
   .footer {
     display: flex;
