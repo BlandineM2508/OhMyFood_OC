@@ -440,11 +440,11 @@ font {
 }
 .section-restaurants .restaurants .card .display:hover {
   opacity: 1;
-  transform: scale(110%);
+  transform: scale(1.1);
 }
 .section-restaurants .restaurants .card .display:active {
   opacity: 1;
-  transform: scale(110%);
+  transform: scale(1.1);
 }
 .section-restaurants .restaurants .card .link {
   width: 100%;

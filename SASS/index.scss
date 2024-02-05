@@ -173,16 +173,19 @@
                 opacity: 0;
                 cursor: pointer;
                 transition: 300ms;
+                
 
                 &:hover {
                     opacity: 1;
-                    transform: scale(110%);
+                    transform: scale(1.1);
                 }
 
                 &:active {
                     opacity: 1;
-                    transform: scale(110%);
+                    transform: scale(1.1);
                 }
+
+                
             }
 
             .link {

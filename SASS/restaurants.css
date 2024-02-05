@@ -148,11 +148,11 @@ font {
 }
 .carte .menu .display:hover {
   opacity: 1;
-  transform: scale(110%);
+  transform: scale(1.1);
 }
 .carte .menu .display:active {
   opacity: 1;
-  transform: scale(110%);
+  transform: scale(1.1);
 }
 .carte .menu .presentation {
   display: flex;
@@ -410,11 +410,11 @@ font {
   }
   .carte .menu .display:hover {
     opacity: 1;
-    transform: scale(110%);
+    transform: scale(1.1);
   }
   .carte .menu .display:active {
     opacity: 1;
-    transform: scale(110%);
+    transform: scale(1.1);
   }
   .carte .menu .presentation {
     display: flex;
@@ -588,10 +588,10 @@ font {
     align-self: center;
   }
   .carte .menu .like {
-    left: 72%;
+    left: 70%;
   }
   .carte .menu .display {
-    left: 72%;
+    left: 70%;
   }
   .footer {
     display: flex;
@@ -697,11 +697,11 @@ font {
   }
   .carte .menu .display:hover {
     opacity: 1;
-    transform: scale(110%);
+    transform: scale(1.1);
   }
   .carte .menu .display:active {
     opacity: 1;
-    transform: scale(110%);
+    transform: scale(1.1);
   }
   .carte .menu .presentation {
     display: flex;
